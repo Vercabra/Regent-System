@@ -222,3 +222,27 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+               
+START TRANSACTION;
+USE `mydb`;
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('theunikumkid@gmail.com', '111', '4723', 'active', 'null', 'Admin');
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('anton128355@gmail.com', '222', '8565', 'active', 'null', 'Admin');
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('bdovhal2017@gmail.com', '333', '4723', 'active', 'null', 'Admin');
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('vashenko1607@gmail.com', '444', '8565', 'active', 'null', 'Admin');
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('bdovhal2017@gmail.com', '555', '4723', 'active', 'null', 'Admin');
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('maksym.polischuk.th@gmail.com', '666', '8565', 'active', 'null', 'Admin');
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('vitadiachenko339@icloud.com', '777', '4723', 'active', 'null', 'Admin');
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('zzzkiritozzzzzzz@gmail.com', '888', '8565', 'active', 'null', 'Admin');
+INSERT INTO `mydb`.`Account` (`email`, `login`, `password`, `state`, `avatar`, `role`) VALUES ('bodyan.kovalenko@gmail.com', '999', '4723', 'active', 'null', 'Admin');
+
+-- -----------------------------------------------------
+-- Data for table `mydb`.`access`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `mydb`;
+INSERT INTO `mydb`.`access` (`role`) VALUES ('Admin', 2, 1);
+               
+COMMIT;
+               
+COMMIT;
