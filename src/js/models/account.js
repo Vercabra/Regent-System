@@ -1,40 +1,40 @@
 const connection = require('../connection');
 const Sequilize = require('sequelize');
 
-class User extends Sequilize.Model {}
+class Account extends Sequilize.Model {}
 
-User.init(
+Account.init(
     {
-        id: {
-            type: Sequilize.INTEGER,
+        role: {
+            type: Sequilize.STRING(45),
             primaryKey: true
         },
-        name: {
-            type: Sequilize.STRING(300),
+        email: {
+            type: Sequilize.STRING(45),
+            allowNull: false
+        },
+        login: {
+            type: Sequilize.STRING(45),
             allowNull: false
         },
         password: {
+            type: Sequilize.STRING(45),
+            allowNull: false
+        },
+        state: {
+            type: Sequilize.BOOLEAN(),
+            allowNull: false
+        },
+        avatar: {
             type: Sequilize.STRING(300),
-            allowNull: false
-        },
-        email: {
-            type: Sequilize.STRING(200),
-            allowNull: false
-        },
-        activationKey: {
-            type: Sequilize.STRING(200),
-            allowNull: false
-        },
-        status: {
-            type: Sequilize.STRING(100),
             allowNull: true
         }
     },
     {
         sequelize: connection,
         freezeTableName: true,
-        modelName: 'User'
+        modelName: 'Account'
     }
 );
 
-module.exports = User
+module.exports = Account
